@@ -14,11 +14,30 @@ Software Student and Data Science student.
 
 class Student:
 
-    def __init__(self, name, age, id):
+    def __init__(self, name, surname, id):
         self.name = name
-        self.age = age
+        self.surname = surname
         self.id = id
         self.subjects = dict()
+
+class CFGStudent(Student):
+    def __init__(self, name, surname, id, specialisation):
+        super().__init__(name, surname, id)
+        self.specialisation = specialisation #can be "Software"/"Data"/"Full Stack"
+
+
+class ClassTopics(CFGStudent): #Please note in this example the CFGD is made up of class topics such as SQL, Python, Dev Concepts, OOP, etc.
+    def __init__(self, name, surname, id, specialisation, topic):
+        super().__init__(name, surname, id, specialisation)
+        self.topic = topic
+
+
+class Marks(ClassTopics):
+    def __init__(self, name, surname, id, specialisation, topic, test_grade):
+        super().__init__(name, surname, id, specialisation, topic)
+        self.test_grade = test_grade
+
+    def average_mark:
 
 
 # class CFGStudent(<should inherit from Student>)

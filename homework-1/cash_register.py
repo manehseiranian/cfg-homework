@@ -3,7 +3,7 @@
 TASK 1
 
 Write a class to represent a Cash Register.
-You class should keep the state of price total and purchased items
+Your class should keep the state of price total and purchased items
 
 Below is a starter code:
 ------------------------
@@ -15,9 +15,10 @@ For example, method add_item probably accepts some kind of an item?..
 """
 
 
+
 class CashRegister:
 
-    def __init__(self):
+    def __init__(self, total_items, total_price, discount):
 
         self.total_items = None # {'item': 'price'}
         self.total_price = 0
